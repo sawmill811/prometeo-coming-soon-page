@@ -52,7 +52,7 @@ canvas {
     height: 77%;
     width: 73.2%;
     background-color: white;
-    background-image: url('https://i.stack.imgur.com/hzk6C.gif');
+    background-image: url('/assets/loading.gif');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
