@@ -89,7 +89,7 @@ body {
     position: absolute;
     bottom: 40%;
     left: 27%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* height: 50%;     */
     height: 150vh !important;
     width: 150vw !important;
