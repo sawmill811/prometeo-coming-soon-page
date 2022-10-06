@@ -2,7 +2,7 @@
 
 #clock {
 	/* border: 3px solid white; */
-	font-size: 0.8em;
+	font-size: min(0.8em, 0.5vw);
 	margin: auto;
 	text-align: center;
 
