@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
@@ -59,7 +59,7 @@ class Effect {
 
 const effect = new Effect(canvas.width, canvas.height);
 let then = 0;
-const fps = 25;
+const fps = 15;
 const fpsInterval = 1000 / fps;
 let timer = 0;
 
@@ -83,7 +83,12 @@ function animate(now) {
     requestAnimationFrame(animate);
 }
 
-animate(0);
+// animate after 2 seconds
+setTimeout(() => {
+    animate(0);
+}, 1500);
+
+// animate(0);
 
 // window resizing
 window.addEventListener('resize', () => {
