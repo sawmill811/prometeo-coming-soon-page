@@ -110,6 +110,10 @@ body {
     /* border: 2px solid red; */
 }
 
+@media (max-width: 480px) {
+   
+}
+
 #right {
     /* border: 2px solid red; */
     display: flex;
