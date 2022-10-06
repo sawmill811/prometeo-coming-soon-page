@@ -43,7 +43,7 @@ body {
 }
 
 #left-top {
-    height: 50%;
+    height: 40%;
     font-size: 8vmin;
     /* sans serif font */
     font-family: 'Roboto', sans-serif;
@@ -78,10 +78,26 @@ body {
 }
 
 #left-bottom {
-    height: 40%;
+    height: 60%;
     display: flex;
     align-items: center;
     /* border: 2px solid white; */
+}
+
+#robot-canvas {
+    display: block;
+    position: absolute;
+    bottom: 40%;
+    left: 27%;
+    border: 2px solid red;
+    /* height: 50%;     */
+    height: 150vh !important;
+    width: 150vw !important;
+    /* max-height: 118vh;
+    max-width: 92vw; */
+    padding: 0;
+    transform: translate(-50%, 50%);
+    z-index: 999 !important;
 }
 
 #robot {
@@ -115,7 +131,7 @@ body {
 
 #logo2 {
     width: 100%;
-    max-width: 35vw;
+    max-width: 38vw;
     /* height: 100%; */
 }
 
@@ -181,7 +197,10 @@ body {
     opacity: 0;
     width: 100%;
     height: 100%;
+    /* For hosting */
     background-image: url("/prometeo-coming-soon-page/assets/loading3.gif");
+    /* For local */
+    /* background-image: url("/assets/loading3.gif"); */
     background-position: center;
     background-size: 25%;
     background-repeat: no-repeat;

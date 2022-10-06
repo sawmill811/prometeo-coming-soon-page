@@ -5,11 +5,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-gradient.addColorStop(0, '#b5f8ff');
-gradient.addColorStop(0, '#84f4eb');
-gradient.addColorStop(0, '#3f74a6');
+gradient.addColorStop(0, '#000707');
+gradient.addColorStop(0, '#04a4ba');
+// gradient.addColorStop(0, '#3f74a6');
 
-class Symbol {
+class MatrixSymbol {
     constructor(x, y, fontSize, canvasHeight){
         // matrix rain style characters
         this.chars = 'アァカサタナハマヤャレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=';
@@ -44,7 +44,7 @@ class Effect {
 
     #init(){
         for(let i = 0; i < this.columns; i++){
-            this.symbols[i] = new Symbol(i, 0, this.font, this.ch);
+            this.symbols[i] = new MatrixSymbol(i, 0, this.font, this.ch);
         }
     }
 
