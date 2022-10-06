@@ -7,6 +7,9 @@
 html {
     scroll-behavior: smooth;
     background: rgb(0,4,4);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     /* background: radial-gradient(circle, rgba(0,4,4,1) 0%, rgba(0,71,81,1) 90%); */
 }
 
@@ -31,6 +34,7 @@ body {
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     animation: fadein 1s ease-in 4s forwards;
+    overflow: hidden;
 }
 
 #left {
@@ -89,7 +93,7 @@ body {
     position: absolute;
     bottom: 40%;
     left: 27%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     /* height: 50%;     */
     height: 150vh !important;
     width: 150vw !important;
@@ -98,6 +102,7 @@ body {
     padding: 0;
     transform: translate(-50%, 50%);
     z-index: 999 !important;
+    overflow: hidden !important;
 }
 
 #robot {
@@ -157,6 +162,7 @@ body {
 
 #loadingLaptopDiv {
     height: 100vh;
+    border: 2px solid red;
     width: 100vw;
 }
 
@@ -167,6 +173,7 @@ body {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+    border: 2px solid blue;
     animation: fadeout 1s ease-in 4s forwards;
 }
 
@@ -174,7 +181,9 @@ body {
     width: 60vmin;
     padding: none;
     margin: none;
+    border: 2px solid green;
     animation: zoomin 2s ease-in-out 4s forwards;
+    overflow: hidden;
 }
 
 #loading {
@@ -191,6 +200,7 @@ body {
     background-repeat: no-repeat;
     animation: fadeout 0.5s ease-in 4s forwards;
     /* border: 5px solid red; */
+    overflow: hidden;
 }
 
 #loadingImg {
@@ -203,6 +213,7 @@ body {
     /* background-image: url("/assets/loading3.gif"); */
     background-position: center;
     background-size: 25%;
+    border: 2px solid white;
     background-repeat: no-repeat;
     animation: fadein 0.5s ease-in 0.5s forwards;
 }
@@ -250,9 +261,13 @@ body {
     /* src: url("/assets/Minecraft.ttf");  */
 }
 
-@media (max-width: 1024px) {
+@media (orientation: portrait) {
     #main-container {
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    #left {
+        width: 100%;
     }
 }
