@@ -225,8 +225,10 @@ body {
 
 @font-face {
     font-family: minecraft;
-    /* src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf"); */
-    src: url("/assets/Minecraft.ttf");
+    /* when deploying: */
+    src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf");
+    /* for local dev: */
+    /* src: url("/assets/Minecraft.ttf");  */
 }
 
 @media (max-width: 1024px) {
