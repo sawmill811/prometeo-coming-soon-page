@@ -66,12 +66,16 @@ const phrases = [
     'coming soon',
     // 'вскоре',
     'जल्द ही',
+    'coming soon',
     'ਜਲਦੀ ਹੀ',    // punjabi
+    'coming soon',
     'শীঘ্রই আসছে', // bengali
+    'coming soon',
     // 'ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ', // kannada
     // 'लवकरच येत आहे', // marathi
     'جلد آرہا ہے۔', // urdu
-    'త్వరలో' // telugu
+    'coming soon',
+    'త్వరలో', // telugu
 ];
 
 
