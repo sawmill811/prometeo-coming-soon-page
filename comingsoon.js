@@ -62,19 +62,19 @@ class TextScramble {
 
 const phrases = [
   // 'již brzy',
-  "Coming Soon",
+  "Coming soon...",
   // 'вскоре',
-  "जल्द ही",
-  "Coming Soon",
-  "ਜਲਦੀ ਹੀ", // punjabi
-  "Coming Soon",
-  "শীঘ্রই আসছে", // bengali
-  "Coming Soon",
+  "जल्द ही...",
+  "Coming soon...",
+  "ਜਲਦੀ ਹੀ...", // punjabi
+  "Coming soon...",
+  "শীঘ্রই আসছে...", // bengali
+  "Coming Soon...",
   // 'ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ', // kannada
   // 'लवकरच येत आहे', // marathi
-  "جلد آرہا ہے۔", // urdu
-  "Coming Soon",
-  "త్వరలో", // telugu
+  "جلد آرہا ہے...", // urdu
+  "Coming soon...",
+  "త్వరలో...", // telugu
 ];
 
 const el = document.querySelector("#coming-soon");
