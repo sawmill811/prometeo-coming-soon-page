@@ -26,10 +26,11 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     opacity: 0;
-    /* align-items: center; */
-    justify-content: center;
-    /* border: 2px solid blue; */
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid blue;
     /* background-image: url("assets/bg.jpg"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
@@ -38,12 +39,13 @@ body {
 }
 
 #left {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
+    height: 20vh;
 }
 
 #left-top {
@@ -67,6 +69,7 @@ body {
 }
 
 #coming-soon {
+    font-size: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,17 +97,18 @@ body {
 #robot-canvas {
     display: block;
     position: absolute;
-    bottom: 40%;
-    left: 27%;
-    /* border: 2px solid red; */
+    /* bottom: 40%; */
+    /* left: 27%; */
+    height: fit-content;
+    border: 2px solid red;
     /* height: 50%;     */
-    height: 150vh !important;
+    height: 100vh !important;
     width: 150vw !important;
     /* max-height: 118vh;
     max-width: 92vw; */
     padding: 0;
-    transform: translate(-50%, 50%);
-    z-index: 999 !important;
+    /* transform: translate(-50%, 50%); */
+    z-index: 2 !important;
     overflow: hidden !important;
 }
 
@@ -115,18 +119,18 @@ body {
 }
 
 #right {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 90%;
+    height: fit-content;
     justify-content: space-evenly;
 }
 
 #right-top {
     margin-top: 5vh;
     height: 50%;
-    /* border: 2px solid white; */
+    /* border: 2px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,18 +143,18 @@ body {
 }
 
 #right-bottom {
-    height: fit-content;
-    /* border: 2px solid white; */
+    height: 20vh;
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #logo2 {
-    width: 100%;
+    height: 25vh;
     max-width: 40vw;
     /* min-width: 30vw; */
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
