@@ -115,7 +115,7 @@ body {
 }
 
 #right {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -126,7 +126,7 @@ body {
 #right-top {
     margin-top: 5vh;
     height: 50%;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,13 +134,13 @@ body {
 
 #logo {
     height: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     animation: up-down 1s ease-in-out infinite alternate;
 }
 
 #right-bottom {
     height: fit-content;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +154,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 /* #matrix-container {
