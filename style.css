@@ -129,6 +129,12 @@ body {
     justify-content: center;
 }
 
+#logo {
+    width: 50%;
+    /* border: 2px solid red; */
+    animation: up-down 1s ease-in-out infinite alternate;
+}
+
 #right-bottom {
     height: 30%;
     /* border: 2px solid white; */
@@ -235,6 +241,15 @@ body {
     animation: fadein 1s ease-in 3s forwards;
 }
 
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 @keyframes zoomin {
     0% {
         height: 36vmin;
@@ -261,9 +276,9 @@ body {
 
 @font-face {
     font-family: minecraft;
-    /* when deploying: */
+    /* for hosting: */
     src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf");
-    /* for local dev: */
+    /* for local: */
     /* src: url("/assets/Minecraft.ttf");  */
 }
 

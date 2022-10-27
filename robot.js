@@ -13,7 +13,7 @@ if (w > 480) {
     const robot_app = new Application(robot_canvas);
 
     // For hosting
-    // robot_app.load('/prometeo-coming-soon-page/scene.splinecode');
+    robot_app.load('/prometeo-coming-soon-page/scene.splinecode');
     // For local
-    robot_app.load('./scene.splinecode');
+    // robot_app.load('./scene.splinecode');
 }
