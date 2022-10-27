@@ -110,34 +110,37 @@ body {
 
 #robot {
     width: 40%;
+    max-width: 4vw;
     /* border: 2px solid red; */
 }
 
 #right {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 90%;
+    justify-content: space-evenly;
 }
 
 #right-top {
     margin-top: 5vh;
-    max-height: 50%;
-    /* border: 2px solid white; */
+    height: 50%;
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #logo {
-    width: 50%;
-    /* border: 2px solid red; */
+    height: 100%;
+    border: 2px solid red;
     animation: up-down 1s ease-in-out infinite alternate;
 }
 
 #right-bottom {
-    height: 30%;
-    /* border: 2px solid white; */
+    height: fit-content;
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,8 +148,13 @@ body {
 
 #logo2 {
     width: 100%;
-    max-width: 38vw;
-    /* height: 100%; */
+    max-width: 40vw;
+    /* min-width: 30vw; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
 }
 
 /* #matrix-container {
@@ -217,9 +225,9 @@ body {
     width: 100%;
     height: 100%;
     /* For hosting */
-    background-image: url("/prometeo-coming-soon-page/assets/loading3.gif");
+    /* background-image: url("/prometeo-coming-soon-page/assets/loading3.gif"); */
     /* For local */
-    /* background-image: url("/assets/loading3.gif"); */
+    background-image: url("/assets/loading3.gif");
     background-position: center;
     background-size: 25%;
     /* border: 2px solid white; */
@@ -277,9 +285,9 @@ body {
 @font-face {
     font-family: minecraft;
     /* for hosting: */
-    src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf");
+    /* src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf"); */
     /* for local: */
-    /* src: url("/assets/Minecraft.ttf");  */
+    src: url("/assets/Minecraft.ttf"); 
 }
 
 @media (orientation: portrait) {
@@ -297,17 +305,23 @@ body {
         visibility: hidden;
     }
     #right {
-        height: 50%;
+        height: 60%;
         width: 100%;
     }
+
+    #right-top {
+        margin-top: 0;
+    }
+
     #logo{
         /* border: 2px solid white; */
-        width: 50%;
-        max-width: 30vmin;
+        /* width: 50%; */
+        /* max-width: 30vmin; */
+        height: 120%;
     }
     #logo2{
         /* border: 2px solid red; */
-        max-width: 90vw;
+        max-width: 80vw;
     }
     #coming-soon {
         font-size: 9vmin;
