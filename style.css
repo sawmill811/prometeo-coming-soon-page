@@ -7,6 +7,9 @@
 html {
     scroll-behavior: smooth;
     background: rgb(0,4,4);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     /* background: radial-gradient(circle, rgba(0,4,4,1) 0%, rgba(0,71,81,1) 90%); */
 }
 
@@ -31,6 +34,7 @@ body {
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     animation: fadein 1s ease-in 4s forwards;
+    overflow: hidden;
 }
 
 #left {
@@ -43,7 +47,7 @@ body {
 }
 
 #left-top {
-    height: 50%;
+    height: 40%;
     font-size: 8vmin;
     /* sans serif font */
     font-family: 'Roboto', sans-serif;
@@ -63,6 +67,9 @@ body {
 }
 
 #coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Minecraft;
     color: #0fd0d0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -78,14 +85,32 @@ body {
 }
 
 #left-bottom {
-    height: 40%;
+    height: 60%;
     display: flex;
     align-items: center;
     /* border: 2px solid white; */
 }
 
+#robot-canvas {
+    display: block;
+    position: absolute;
+    bottom: 40%;
+    left: 27%;
+    /* border: 2px solid red; */
+    /* height: 50%;     */
+    height: 150vh !important;
+    width: 150vw !important;
+    /* max-height: 118vh;
+    max-width: 92vw; */
+    padding: 0;
+    transform: translate(-50%, 50%);
+    z-index: 999 !important;
+    overflow: hidden !important;
+}
+
 #robot {
     width: 40%;
+    max-width: 4vw;
     /* border: 2px solid red; */
 }
 
@@ -94,6 +119,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 90%;
+    justify-content: space-evenly;
 }
 
 #right-top {
@@ -105,8 +132,14 @@ body {
     justify-content: center;
 }
 
+#logo {
+    height: 100%;
+    /* border: 2px solid red; */
+    animation: up-down 1s ease-in-out infinite alternate;
+}
+
 #right-bottom {
-    height: 30%;
+    height: fit-content;
     /* border: 2px solid white; */
     display: flex;
     align-items: center;
@@ -115,8 +148,13 @@ body {
 
 #logo2 {
     width: 100%;
-    max-width: 35vw;
-    /* height: 100%; */
+    max-width: 40vw;
+    /* min-width: 30vw; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
 }
 
 /* #matrix-container {
@@ -141,6 +179,7 @@ body {
 
 #loadingLaptopDiv {
     height: 100vh;
+    /* border: 2px solid red; */
     width: 100vw;
 }
 
@@ -151,6 +190,7 @@ body {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+    /* border: 2px solid blue; */
     animation: fadeout 1s ease-in 4s forwards;
 }
 
@@ -158,7 +198,9 @@ body {
     width: 60vmin;
     padding: none;
     margin: none;
+    /* border: 2px solid green; */
     animation: zoomin 2s ease-in-out 4s forwards;
+    overflow: hidden;
 }
 
 #loading {
@@ -175,15 +217,20 @@ body {
     background-repeat: no-repeat;
     animation: fadeout 0.5s ease-in 4s forwards;
     /* border: 5px solid red; */
+    overflow: hidden;
 }
 
 #loadingImg {
     opacity: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/prometeo-coming-soon-page/assets/loading3.gif");
+    /* For hosting */
+    /* background-image: url("/prometeo-coming-soon-page/assets/loading3.gif"); */
+    /* For local */
+    background-image: url("/assets/loading3.gif");
     background-position: center;
     background-size: 25%;
+    /* border: 2px solid white; */
     background-repeat: no-repeat;
     animation: fadein 0.5s ease-in 0.5s forwards;
 }
@@ -202,14 +249,26 @@ body {
     animation: fadein 1s ease-in 3s forwards;
 }
 
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 @keyframes zoomin {
     0% {
         height: 36vmin;
         width: 60vmin;
     }
-    100% {
+    99% {
         height: 150vmax;
         width: 250vmax;
+    }
+    100% {
+        display: none;
     }
 }
 
@@ -225,15 +284,46 @@ body {
 
 @font-face {
     font-family: minecraft;
-    /* when deploying: */
-    src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf");
-    /* for local dev: */
-    /* src: url("/assets/Minecraft.ttf");  */
+    /* for hosting: */
+    /* src: url("/prometeo-coming-soon-page/assets/Minecraft.ttf"); */
+    /* for local: */
+    src: url("/assets/Minecraft.ttf"); 
 }
 
-@media (max-width: 1024px) {
+@media (orientation: portrait) {
     #main-container {
         flex-direction: column-reverse;
         align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #left {
+        width: 100%;
+        height: 30%;
+    }
+    #robot-canvas {
+        visibility: hidden;
+    }
+    #right {
+        height: 60%;
+        width: 100%;
+    }
+
+    #right-top {
+        margin-top: 0;
+    }
+
+    #logo{
+        /* border: 2px solid white; */
+        /* width: 50%; */
+        /* max-width: 30vmin; */
+        height: 120%;
+    }
+    #logo2{
+        /* border: 2px solid red; */
+        max-width: 80vw;
+    }
+    #coming-soon {
+        font-size: 9vmin;
     }
 }
