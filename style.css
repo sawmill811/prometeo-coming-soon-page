@@ -119,29 +119,18 @@ a {
     z-index: 999;
 }
 
-#facebook {
+#twitter, #linkedin, #instagram {
     z-index: 999;
-    width: 8vh;
+    width: 6vmin;
     transition: transform 0.1s ease-in-out;
+}
+
+/* #twitter {
     border-radius: 1vh;
-}
-
-#linkedin {
-    z-index: 999;
-    width: 8vh;
-    transition: transform 0.1s ease-in-out;
-    /* background-color: azure; */
-    /* border-radius: 1vh; */
-}
-
-#instagram {
-    z-index: 999;
-    width: 8vh;
-    transition: transform 0.1s ease-in-out;
-}
+} */
 
 /* add hover zoomin effect */
-#linkedin:hover, #facebook:hover, #instagram:hover {
+#linkedin:hover, #twitter:hover, #instagram:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -299,11 +288,40 @@ a {
     src: url("/assets/Minecraft.ttf"); 
 }
 
+@media screen and (max-width: 1080px) {
+    #robot-canvas {
+        visibility: hidden;
+    }
+}
+
 @media (orientation: portrait) {
     #main-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    #screen {
+        width: 100%;
+    }
+
+    #bottom {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .coming-soon-container {
+        width: 80%;
+    }
+
+    #socials {
+        flex-direction: row;
+        width: 45%;
+    }
+
+    #socials img {
+        width: 8vmin;
+        min-width: 30px;
     }
 
     #left {
