@@ -18,6 +18,12 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: rgb(0,7,7);
+    background: -moz-radial-gradient(circle, rgba(0,7,7,1) 0%, rgba(0,71,81,1) 45%);
+    background: -webkit-radial-gradient(circle, rgba(0,7,7,1) 0%, rgba(0,71,81,1) 45%);
+    background: radial-gradient(circle, rgba(0,7,7,1) 0%, rgba(0,71,81,1) 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000707",endColorstr="#004751",GradientType=1);
+
 }
 
 #main-container {
