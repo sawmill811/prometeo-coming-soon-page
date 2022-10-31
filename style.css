@@ -70,12 +70,12 @@ body {
 }
 
 .dummy {
-    width: 30%;
+    width: 25%;
     /* border: 2px solid white; */
 }
 
 .coming-soon-container {
-    width: 45%;
+    width: 55%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Minecraft;
-    font-size: 8vh;
+    font-size: min(6vh,4vw);
     color: #0fd0d0;
     background-color: rgba(0, 0, 0, 0.6);
     height: fit-content;
@@ -100,7 +100,7 @@ body {
 }
 
 #dummy2 {
-    width: 12%;
+    width: 7%;
     /* border: 2px solid white; */
 }
 
@@ -119,9 +119,15 @@ a {
     z-index: 999;
 }
 
-#twitter, #linkedin, #instagram {
+#twitter, #linkedin {
     z-index: 999;
     width: 6vmin;
+    transition: transform 0.1s ease-in-out;
+}
+
+#instagram {
+    z-index: 999;
+    width: 6.5vmin;
     transition: transform 0.1s ease-in-out;
 }
 
@@ -290,7 +296,7 @@ a {
 
 @media screen and (max-width: 1080px) {
     #robot-canvas {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -303,6 +309,7 @@ a {
 
     #screen {
         width: 100%;
+        height: 50%;
     }
 
     #bottom {
@@ -324,21 +331,21 @@ a {
         min-width: 30px;
     }
 
-    #left {
+    /* #left {
         width: 100%;
         height: 30%;
-    }
+    } */
     #robot-canvas {
         visibility: hidden;
     }
-    #right {
+    /* #right {
         height: 60%;
         width: 100%;
     }
 
     #right-top {
         margin-top: 0;
-    }
+    } */
 
     #logo{
         /* border: 2px solid white; */
@@ -351,6 +358,15 @@ a {
         max-width: 80vw;
     }
     #coming-soon {
-        font-size: 9vmin;
+        font-size: 7vmin;
     }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #linkedin, #twitter, #instagram {
+        display: none;
+    }
+    /* #socials {
+        display: none;
+    } */
 }
